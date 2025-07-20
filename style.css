@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 25%, #4c1d95 50%, #5b21b6 75%, #6d28d9 100%);
+}
+
+.metallic-blue {
+    background: linear-gradient(145deg, #1e3a8a, #3b82f6, #60a5fa, #93c5fd);
+    background-size: 300% 300%;
+    animation: metallicShine 3s ease-in-out infinite;
+}
+
+@keyframes metallicShine {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.apple-logo {
+    width: 40px;
+    height: 40px;
+    fill: #ffffff;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 27, 75, 0.7), rgba(109, 40, 217, 0.5));
+    z-index: 1;
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.racket-showcase {
+    background: linear-gradient(145deg, #1e1b4b, #312e81);
+    border: 2px solid #60a5fa;
+    box-shadow: 0 20px 40px rgba(96, 165, 250, 0.3);
+    transition: all 0.3s ease;
+}
+
+.racket-showcase:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(139, 92, 246, 0.4);
+    border-color: #a855f7;
+}
+
+.buy-btn {
+    background: linear-gradient(145deg, #3b82f6, #8b5cf6);
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(145deg, #60a5fa, #a855f7);
+    transform: translateY(-2px);
+}
+
+.contact-section {
+    background: linear-gradient(145deg, #1e1b4b, #312e81);
+    border-top: 3px solid #60a5fa;
+}
+
+.hero-content {
+    animation: fadeInUp 2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sign-in-btn {
+    transition: all 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+}

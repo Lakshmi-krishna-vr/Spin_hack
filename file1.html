@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iSmasH - Rackets</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    .navbar {
+      padding: 1rem 2rem;
+      background-color: #1a1a1a;
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ff0000;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 2rem;
+      justify-items: center;
+    }
+
+    .product-card {
+      background-color: #121212;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(255, 0, 0, 0.4);
+      transition: transform 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin: 0 auto;
+    }
+
+    .product-info {
+      width: 100%;
+      text-align: center;
+    }
+
+    .product-info h3 {
+      margin: 0.5rem 0 0.2rem;
+      font-size: 1.2rem;
+      color: #ff0000;
+    }
+
+    .product-info p {
+      margin: 0.2rem 0;
+      font-size: 0.9rem;
+      color: #e0e0e0;
+    }
+
+    .price {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    .buy-button {
+      margin-top: 0.8rem;
+      background-color: #ff0000;
+      color: #ffffff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .buy-button:hover {
+      background-color: #e60000;
+    }
+
+    @media (max-width: 1000px) {
+      .products {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+
+    .footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">iSmasH Racket Collection</div>
+  <div class="products">
+
+    <div class="product-card">
+      <img src="bat4.jpg" alt="iSmasH AeroLite">
+      <div class="product-info">
+        <h3>iSmasH AeroLite</h3>
+        <p>Height: 675mm | Weight: 85g</p>
+        <p>Material: Carbon Fiber</p>
+        <p>Precision: High | Control: Excellent</p>
+        <p class="price">399rs</p>
+        <a href="#" class="buy-button">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="bat5.jpg" alt="iSmasH TitanFlex">
+      <div class="product-info">
+        <h3>iSmasH TitanFlex</h3>
+        <p>Height: 670mm | Weight: 88g</p>
+        <p>Material: Titanium Alloy</p>
+        <p>Power: Strong | Durability: Elite</p>
+        <p class="price">1000rs</p>
+        <a href="#" class="buy-button">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="bat6.jpg" alt="iSmasH ProStrike">
+      <div class="product-info">
+        <h3>iSmasH ProStrike</h3>
+        <p>Height: 680mm | Weight: 82g</p>
+        <p>Material: Graphite</p>
+        <p>Response: Fast | Feel: Soft</p>
+        <p class="price">$688rs</p>
+        <a href="#" class="buy-button">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="bat1.jpg" alt="iSmasH NanoCore">
+      <div class="product-info">
+        <h3>iSmasH NanoCore</h3>
+        <p>Height: 665mm | Weight: 84g</p>
+        <p>Material: Nano Carbon</p>
+        <p>Control: Tight | Agility: High</p>
+        <p class="price">999rs</p>
+        <a href="#" class="buy-button">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="bat2.jpg" alt="iSmasH BladeX">
+      <div class="product-info">
+        <h3>iSmasH BladeX</h3>
+        <p>Height: 678mm | Weight: 86g</p>
+        <p>Material: Steel Core</p>
+        <p>Power: Maximum | Grip: Ergonomic</p>
+        <p class="price">1115rs</p>
+        <a href="#" class="buy-button">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="bat7.jpg" alt="iSmasH ShadowEdge">
+      <div class="product-info">
+        <h3>iSmasH ShadowEdge</h3>
+        <p>Height: 672mm | Weight: 83g</p>
+        <p>Material: Graphite Blend</p>
+        <p>Style: Sleek | Speed: Extreme</p>
+        <p class="price">1000rs</p>
+        <a href="#" class="buy-button">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="bat8.jpg" alt="iSmasH StormForce">
+      <div class="product-info">
+        <h3>iSmasH StormForce</h3>
+        <p>Height: 674mm | Weight: 87g</p>
+        <p>Material: Carbon Graphite</p>
+        <p>Balance: Even | Performance: Pro-Level</p>
+        <p class="price">877rs</p>
+        <a href="#" class="buy-button">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="bat9.jpg" alt="iSmasH HyperAce">
+      <div class="product-info">
+        <h3>iSmasH HyperAce</h3>
+        <p>Height: 671mm | Weight: 84g</p>
+        <p>Material: Composite Alloy</p>
+        <p>Power: High | Stability: Firm</p>
+        <p class="price">500rs</p>
+        <a href="#" class="buy-button">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img src="bat6.jpg" alt="iSmasH NeoStrike">
+      <div class="product-info">
+        <h3>iSmasH NeoStrike</h3>
+        <p>Height: 669mm | Weight: 82g</p>
+        <p>Material: Nano Graphite</p>
+        <p>Flex: Adaptive | Smash: Powerful</p>
+        <p class="price">600rs</p>
+        <a href="#" class="buy-button">Buy Now</a>
+      </div>
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>

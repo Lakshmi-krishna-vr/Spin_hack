@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iSmasH</title>
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body, html {
+      overflow-x: hidden;
+      background: linear-gradient(135deg, #000000, #4b0000); /* Black to dark red */
+      color: white;
+    }
+
+    header {
+      height: 20vh;
+      background: rgba(0, 0, 0, 0.95);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      box-shadow: 0 4px 8px rgba(255,0,0,0.3);
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 50px;
+      margin-right: 10px;
+      filter: brightness(0) saturate(100%) invert(14%) sepia(90%) saturate(7485%) hue-rotate(357deg) brightness(88%) contrast(125%);
+    }
+
+    .title {
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px #ff0000;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: background 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-links a:hover {
+      background: rgba(255, 0, 0, 0.2);
+    }
+
+    /* Background Video Section */
+    .video-section {
+      position: relative;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+    }
+
+    .video-section video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .caption {
+      position: absolute;
+      top: 20%;
+      right: 3%;
+      transform: translateY(0);
+      color: white;
+      text-align: right;
+      text-shadow: 2px 2px 8px black;
+      z-index: 1;
+    }
+
+    .caption h1 {
+      font-size: 2.2em;
+      margin-bottom: 0.2em;
+      color: #ff0000;
+    }
+
+    .caption p {
+      font-size: 1em;
+      max-width: 300px;
+    }
+
+    .racket-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 40px;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(4px);
+    }
+
+    .racket {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(6px);
+      border-radius: 20px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+      width: 300px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+      color: white;
+    }
+
+    .racket:hover {
+      transform: scale(1.05);
+    }
+
+    .racket img {
+      height: 180px;
+      margin-bottom: 20px;
+    }
+
+    .features {
+      text-align: left;
+      margin: 10px 0;
+    }
+
+    .price {
+      font-size: 1.5em;
+      color: red;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .buy-btn {
+      background: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+
+    }
+
+    .buy-btn:hover {
+      background: darkred;
+    }
+
+    .explore-bar {
+      text-align: center;
+      padding: 30px;
+      background: rgba(255, 0, 0, 0.8);
+    }
+
+    .explore-bar a {
+      background: white;
+      color: #4b0000;
+      text-decoration: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.2em;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .explore-bar a:hover {
+      background: #f0f0f0;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.95);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 1.2em;
+    }
+
+    @media (max-width: 768px) {
+      .racket-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      header {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .caption h1 {
+        font-size: 2em;
+      }
+
+      .caption p {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo">
+      <div class="title">iSmasH</div>
+    </div>
+    <div class="nav-links">
+      <a href="aboutus.html"><i class="fas fa-info-circle"></i> About Us</a>
+      <a href="#"><i class="fas fa-phone-alt"></i> Contact Us</a>
+      <a href="#"><i class="fas fa-comment-dots"></i> Feedback</a>
+      <a href="#"><i class="fas fa-sign-in-alt"></i> Sign In</a>
+    </div>
+  </header>
+
+  <!-- Background Video Section -->
+  <div class="video-section">
+    <video autoplay muted loop playsinline>
+      <source src="apple-racket.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="caption">
+      <h1>Apple Power. Smashed Perfect.</h1>
+      <p>The fusion of innovation and performance — introducing the next generation of badminton rackets.</p>
+    </div>
+  </div>
+
+  <!-- Racket Products -->
+  <section class="racket-section">
+    <div class="racket">
+      <img src="bat2.jpg" alt="Racket 1">
+      <h3>iSmasH Thunder Pro</h3>
+      <div class="features">
+        <p>🎨 Color: Metallic Red</p>
+        <p>⚖️ Weight: 300g</p>
+        <p>📏 Length: 68cm</p>
+        <p>🔘 Handle: Soft Grip with Apple Logo</p>
+      </div>
+      <div class="price">2000rs</div>
+      <button class="buy-btn"><a href="buynow.html"></a>Buy Now</button>
+    </div>
+
+    <div class="racket">
+      <img src="bat3.jpg" alt="Racket 2">
+      <h3>iSmasH Aero Lite</h3>
+      <div class="features">
+        <p>🎨 Color: Neon Green</p>
+        <p>⚖️ Weight: 280g</p>
+        <p>📏 Length: 67cm</p>
+        <p>🔘 Handle: Soft Grip with Apple Logo</p>
+      </div>
+      <div class="price">779rs</div>
+      <button class="buy-btn">Buy Now</button>
+    </div>
+
+    <div class="racket">
+      <img src="bat1.jpg" alt="Racket 3">
+      <h3>iSmasH Power Max</h3>
+      <div class="features">
+        <p>🎨 Color: Electric Blue</p>
+        <p>⚖️ Weight: 320g</p>
+        <p>📏 Length: 70cm</p>
+        <p>🔘 Handle: Soft Grip with Apple Logo</p>
+      </div>
+      <div class="price">1099rs</div>
+      <button class="buy-btn">Buy Now</button>
+    </div>
+  </section>
+
+  <!-- Explore More Bar -->
+  <div class="explore-bar">
+    <a href="file1.html">Click here to explore More products</a>
+  </div>
+
+<section class="why-section">
+  <h2>Why iSmasH?</h2>
+  <div class="box-container">
+    <div class="feature-box">
+      <h3>Next-Gen Technology</h3>
+      <p>iSmasH rackets merge Apple’s tech innovations with advanced sports engineering to offer smart performance tracking and unbeatable precision.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Ergonomic & Lightweight</h3>
+      <p>Engineered with ergonomic grips and optimized weight distribution, iSmasH reduces fatigue and improves your reaction time on the court.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Stylish & Durable</h3>
+      <p>Futuristic design meets high-quality materials, giving you a racket that's both visually stunning and built to withstand intense gameplay.</p>
+    </div>
+    <div class="feature-box">
+      <h3>About iSmasH</h3>
+      <p>The iSmasH badminton racket is crafted for players who demand performance and innovation. Designed in collaboration with professional athletes and tech experts, it elevates every aspect of your game.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Smart Sensor Integration</h3>
+      <p>Track your swings, speed, and performance with built-in sensors that sync seamlessly with your smartphone or smartwatch.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Customizable Settings</h3>
+      <p>Adjust grip style, tension preferences, and balance to match your personal playing style using the companion app.</p>
+    </div>
+    <div class="feature-box">
+      <h3>Eco-Friendly Materials</h3>
+      <p>Built with sustainable and recyclable materials, iSmasH helps you reduce your environmental footprint without compromising performance.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+.why-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #000; /* Black background */
+  color: white;
+}
+.why-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #ff0000; /* Red heading */
+}
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.feature-box {
+  background-color: #fff; /* White box */
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.2); /* Red shadow hint */
+  text-align: left;
+  border-left: 5px solid #ff0000; /* Red accent line */
+}
+.feature-box h3 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  color: #ff0000; /* Red title */
+}
+.feature-box p {
+  color: #222; /* Near-black text for readability */
+}
+</style>
+
+
+
+  <!-- Footer -->
+  <footer>
+    📞 Contact Us: +91-8075605169,+91-9747280570
+  </footer>
+
+</body>
+</html>
